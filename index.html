@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign in</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Logo placeholder: drop your own logo image in here -->
+  <div class="logo-slot" aria-label="Logo placeholder">LOGO</div>
+
+  <!-- ============ Page 1: Sign in / Sign up ============ -->
+  <main class="card" id="screen-signin">
+    <h1 class="heading">Sign in or create account</h1>
+
+    <form id="signin-form" novalidate>
+      <label class="field-label" for="identifier">Enter mobile phone number or email</label>
+      <input type="text" id="identifier" class="input" autocomplete="username" required>
+      <small class="error" id="identifier-error"></small>
+
+      <button type="submit" class="btn btn-primary">Continue</button>
+    </form>
+
+    <a href="#" class="help-link">Need help?</a>
+  </main>
+
+  <!-- ============ Page 2: Password entry ============ -->
+  <main class="card hidden" id="screen-password">
+    <h1 class="heading heading-sm">Already have an account?</h1>
+    <p class="subheading">Enter your password to sign in.</p>
+
+    <p class="identifier-line">
+      <span id="identifier-display">user@example.com</span>
+      <a href="#" class="link" id="change-identifier">Change</a>
+    </p>
+
+    <form id="password-form" novalidate>
+      <div class="field-row">
+        <label class="field-label" for="password">Password</label>
+        <a href="#" class="link">Forgot your password?</a>
+      </div>
+      <input type="password" id="password" class="input" autocomplete="current-password" required>
+      <small class="error" id="password-error"></small>
+
+      <button type="submit" class="btn btn-primary">Sign in</button>
+      <button type="button" class="btn btn-secondary">Sign in with a code</button>
+    </form>
+
+    <p class="message" id="form-message" role="status" aria-live="polite"></p>
+
+    <div class="divider-text"><span>Or</span></div>
+
+    <p class="create-prompt">Don't have an account? Create account.</p>
+    <button type="button" class="btn btn-secondary">Create your account</button>
+  </main>
+
+  <!-- ============ Shared footer ============ -->
+  <footer class="page-footer">
+    <hr class="footer-rule">
+    <nav class="footer-links">
+      <a href="#">Conditions of Use</a>
+      <a href="#">Privacy Notice</a>
+      <a href="#">Help</a>
+      <a href="#">Legal Notice</a>
+      <a href="#">Cookies Notice</a>
+      <a href="#">Interest-Based Ads</a>
+    </nav>
+    <p class="copyright">© 1996-2026, Company Name, Inc. or its affiliates</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
